@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>toDoList</title>
+  </head>
+
+  <body class="p-4">
+    <main class="max-w-[700px] m-auto bg-gray-50 mt-[50px] p-5">
+      <div class="pb-6">
+        <h1 class="text-3xl font-bold">Task Lists</h1>
+      </div>
+
+      <section class="flex justify-between relative pb-6">
+        <input
+          id="taskInput"
+          class="inputBox border w-full py-[10px] rounded-full"
+          type="text"
+          placeholder=""
+        />
+        <button
+          id="addTaskBtn"
+          class="bg-slate-800 text-white text-sm py-[4px] px-4 rounded-full absolute right-3 top-[8px]"
+        >
+          Add a task
+        </button>
+      </section>
+
+      <section class="pb-4 flex gap-x-2 justify-between items-baseline">
+        <h1 class="text-xl font-normal">Your Lists</h1>
+        <div>
+          <span id="doneTotal">0</span>
+          <span>/</span>
+          <span id="taskTotal">0</span>
+        </div>
+      </section>
+
+      <!-- empty state -->
+      <section id="listsGroup" class="flex flex-col gap-y-1 pb-4"> 
+        <div class="last:block hidden">
+          <img src="img/empty state.png" alt="" class="size-36 m-auto pb-3" />
+          <p class="text-center text-gray-500">No data!</p>
+        </div>
+      </section>
+      
+    </main>
+
+    <section class="flex gap-x-4 justify-center">
+      <button id="deleteAllBtn" class="bg-slate-200 py-1 px-4 mt-3">
+        Delete All
+      </button>
+      <button id="doneAllBtn" class="bg-slate-00 py-1 px-4 mt-3">
+        Done All
+      </button>
+    </section>
+
+    <template id="listTemplate">
+      <div class="list flex gap-x-3 items-center justify-between bg-slate-200 p-2 rounded-smk">
+        <div class="flex gap-x-5 items-center">
+          <input class="markTask" class="size-4" type="checkbox" />
+          <p class="listTask">${currentText}</p>
+        </div>
+        <div class="">
+          <button
+            class="taskEditBtn bg-gray-300 py-1 px-4 rounded-md disabled:opacity-50"
+          >
+            Edit
+          </button>
+          <button class="taskDeleteBtn bg-gray-300 py-1 px-4 rounded-md">
+            Delete
+          </button>
+        </div>
+      </div>
+    </template>
+  </body>
+
+  <script type="module" src="main.js"></script>
+</html>

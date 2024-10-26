@@ -1,0 +1,22 @@
+{
+  "name": "learnvite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "vite": "^5.4.8"
+  },
+  "dependencies": {
+    "serve": "^14.2.4",
+    "sweetalert2": "^11.6.13",
+    "uuid": "^10.0.0"
+  }
+}
